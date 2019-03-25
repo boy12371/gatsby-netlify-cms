@@ -7,6 +7,7 @@ import Feature from "../components/Feature";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import { SearchPageTemplateProps, SearchPageProps } from "../common/interfaces";
+import { isImageInfo } from "../common";
 
 export const SearchPageTemplate: React.FC<SearchPageTemplateProps> = ({
     image,
@@ -29,7 +30,7 @@ export const SearchPageTemplate: React.FC<SearchPageTemplateProps> = ({
                                 className="full-width-image-container margin-top-0"
                                 style={{
                                     backgroundImage: `url(${
-                                        isImageInfo(image, true)
+                                        isImageInfo(image)
                                             ? image.childImageSharp.fluid.src
                                             : image
                                     })`
@@ -56,7 +57,7 @@ export const SearchPageTemplate: React.FC<SearchPageTemplateProps> = ({
                                     <p>{description}</p>
                                 </div>
                             </div>
-                            <Feature gridItems={intro.blurbs} />
+                            <Feature featureItems={intro.blurbs} />
                             <div className="columns">
                                 <div className="column is-7">
                                     <h3 className="has-text-weight-semibold is-size-3">
@@ -97,7 +98,7 @@ export const SearchPageTemplate: React.FC<SearchPageTemplateProps> = ({
                                 className="full-width-image-container"
                                 style={{
                                     backgroundImage: `url(${
-                                        isImageInfo(fullImage, true)
+                                        isImageInfo(fullImage)
                                             ? fullImage.childImageSharp.fluid
                                                   .src
                                             : fullImage

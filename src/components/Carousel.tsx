@@ -20,6 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
                         ]
                     }
                 } = data;
+                carouselItems = carouselItems || [];
 
                 return (
                     <Card
