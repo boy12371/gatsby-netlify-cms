@@ -7,9 +7,7 @@
         "type": "git",
         "url": "https://github.com/boy12371/gatsby-starter-netlify-cms.git"
     },
-    "keywords": [
-        "gatsby"
-    ],
+    "keywords": ["gatsby"],
     "license": "MIT",
     "main": "n/a",
     "scripts": {
@@ -19,7 +17,8 @@
         "develop": "npm run clean && gatsby develop",
         "serve": "gatsby serve",
         "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "http": "http-server ./public/ -p 9000 -a 127.0.0.1 -i -o --cors"
     },
     "dependencies": {
         "bulma": "^0.7.4",
@@ -64,6 +63,7 @@
         "@types/uuid": "^3.4.4",
         "cpy-cli": "^2.0.0",
         "gh-pages": "^2.0.1",
+        "http-server": "^0.11.1",
         "prettier": "^1.16.4",
         "rimraf": "^2.6.3",
         "source-map-support": "^0.5.11",
