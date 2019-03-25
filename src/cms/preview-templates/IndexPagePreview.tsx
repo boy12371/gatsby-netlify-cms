@@ -1,13 +1,8 @@
 import React from "react";
 
-import { IndexPageTemplate } from "../../templates/index-page";
 import { PreviewProps } from "../../common/interfaces";
+import { IndexPageTemplate } from "../../templates/content/IndexPageTemplate";
 
-const IndexPagePreview: React.FC<PreviewProps> = ({ entry, widgetFor }) => (
-    <IndexPageTemplate
-        title={entry.getIn(["data", "title"])}
-        content={widgetFor("body")}
-    />
-);
+const IndexPagePreview: React.FC<PreviewProps> = ({ entry }) => <IndexPageTemplate title={entry.getIn(["data", "title"])} />;
 
 export default IndexPagePreview;

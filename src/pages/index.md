@@ -1,20 +1,29 @@
 ---
-templateKey: index-page
+templateKey: IndexPage
 title: 首页
-isNavigation: true
+description: "首页描述"
+isHeader: true
 isCarousel: true
-isArticle: true
+isFeature: true
 isFooter: true
 carouselItems:
-    - title: 第一张
-      image: /img/carousel1.jpg
+    - title: 公司办公室设计
+      image: /assets/img/carousel1.jpg
       path: /article/2016-12-17/055610-公司办公室设计
-    - title: 第二张
-      image: /img/carousel2.jpg
+    - title: 电商项目
+      image: /assets/img/carousel2.jpg
       path: /article/2017-01-04/150410-电商项目
-    - title: 第三张
-      image: /img/carousel3.jpg
+    - title: 关于我们
+      image: /assets/img/carousel3.jpg
       path: /about
 featureItems:
     - title: 公司办公室设计
+      image: /assets/img/carousel1.jpg
+      path: /article/2016-12-17/055610-公司办公室设计
+    - title: 电商项目
+      image: /assets/img/carousel2.jpg
+      path: /article/2017-01-04/150410-电商项目
+    - title: 关于我们
+      image: /assets/img/carousel3.jpg
+      path: /about
 ---

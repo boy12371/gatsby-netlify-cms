@@ -5,9 +5,7 @@ import { Helmet } from "react-helmet";
 
 function encode(data) {
     return Object.keys(data)
-        .map(
-            key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
 }
 
@@ -40,7 +38,7 @@ export default class Index extends React.Component {
         return (
             <Layout>
                 <section className="section">
-                    <Helmet titleTemplate="%s | 上海匡架网络">
+                    <Helmet titleTemplate="%s | {TITLE}">
                         <title>联系我们</title>
                     </Helmet>
                     <div className="container">
@@ -55,18 +53,10 @@ export default class Index extends React.Component {
                                 onSubmit={this.handleSubmit}
                             >
                                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                                <input
-                                    type="hidden"
-                                    name="form-name"
-                                    value="contact"
-                                />
+                                <input type="hidden" name="form-name" value="contact" />
                                 <div hidden>
                                     <label>
-                                        Don’t fill this out:{" "}
-                                        <input
-                                            name="bot-field"
-                                            onChange={this.handleChange}
-                                        />
+                                        Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
                                     </label>
                                 </div>
                                 <div className="field">
@@ -100,10 +90,7 @@ export default class Index extends React.Component {
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <label
-                                        className="label"
-                                        htmlFor={"message"}
-                                    >
+                                    <label className="label" htmlFor={"message"}>
                                         消息
                                     </label>
                                     <div className="control">
@@ -117,10 +104,7 @@ export default class Index extends React.Component {
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <button
-                                        className="button is-link"
-                                        type="submit"
-                                    >
+                                    <button className="button is-link" type="submit">
                                         发送
                                     </button>
                                 </div>

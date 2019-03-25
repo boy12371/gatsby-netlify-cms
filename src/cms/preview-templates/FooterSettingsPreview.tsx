@@ -1,8 +1,8 @@
 import React from "react";
 
-import Logo from "../../components/Logo";
 import { PreviewProps } from "../../common/interfaces";
+import Layout from "../../components/Layout";
 
-const FooterSettingsPreview: React.FC<PreviewProps> = ({}) => <Logo />;
+const FooterSettingsPreview: React.FC<PreviewProps> = ({}) => <Layout />;
 
 export default FooterSettingsPreview;

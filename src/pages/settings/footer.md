@@ -1,5 +1,5 @@
 ---
-templateKey: footer-settings
+templateKey: FooterSettings
 ---
 
 ## 底部文字

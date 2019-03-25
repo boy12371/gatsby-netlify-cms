@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ArticlePostTemplate } from "../../templates/article-post";
 import { PreviewProps } from "../../common/interfaces";
+import { ArticlePostTemplate } from "../../templates/content/ArticlePostTemplate";
 
 const ArticlePostPreview: React.FC<PreviewProps> = ({ entry, widgetFor }) => (
     <ArticlePostTemplate

@@ -1,119 +1,234 @@
 backend:
-    name: git-gateway
+    name: github
     branch: master
+    repo: boy12371/gatsby-starter-netlify-cms
+    base_url: https://api.netlify.com
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "article"
-    label: "文章"
-    folder: "src/pages/article/{{year}}-{{month}}-{{day}}"
-    create: true
-    slug: "{{hour}}{{minute}}{{second}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "article-post"}
-      - {label: "标题", name: "title", widget: "string", tagname: "h1"}
-      - {label: "时间", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss Z"}
-      - {label: "主体", name: "body", widget: "markdown"}
-      - {label: "标签", name: "tags", widget: "list"}
-    meta:
-      - {label: "描述", name: "description", widget: "text", default: "文章"}
+    - name: article
+      label: 文章
+      folder: "src/pages/article/{{year}}-{{month}}-{{day}}"
+      create: true
+      slug: "{{hour}}{{minute}}{{second}}-{{slug}}"
+      fields:
+          - label: Template Key
+            name: templateKey
+            widget: hidden
+            default: ArticlePost
+          - label: 标题
+            name: title
+            widget: string
+            tagname: h1
+          - label: 描述
+            name: description
+            widget: text
+            default: 文章描述
+          - label: 时间
+            name: date
+            widget: datetime
+            format: "YYYY-MM-DD HH:mm:ss Z"
+          - label: 标签
+            name: tags
+            widget: list
+          - label: 主体
+            name: body
+            widget: markdown
 
-  - name: "pages"
-    label: "单页"
-    files:
-      - file: "src/pages/index.md"
-        label: "首页"
-        name: "index"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "标题", name: "title", widget: "string", default: "首页"}
-          - {label: "导航", name: "isNavigation", widget: "boolean", default: true}
-          - {label: "轮播", name: "isCarousel", widget: "boolean", default: true}
-          - {label: "文章", name: "isArticle", widget: "boolean", default: true}
-          - {label: "底部", name: "isFooter", widget: "boolean", default: true}
-        meta:
-          - {label: "描述", name: "description", widget: "text", default: "首页"}
-      - file: "src/pages/jobs/index.md"
-        label: "招聘英才"
-        name: "jobs"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "jobs-page"}
-          - {label: "标题", name: "title", widget: "string", default: "招聘英才"}
-          - {label: "导航", name: "isNavigation", widget: "boolean", default: true}
-          - {label: "主体", name: "body", widget: "markdown"}
-          - {label: "底部", name: "isFooter", widget: "boolean", default: true}
-        meta:
-          - {label: "描述", name: "description", widget: "text"}
-      - file: "src/pages/about/index.md"
-        label: "关于我们"
-        name: "about"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "标题", name: "title", widget: "string", default: "关于我们"}
-          - {label: "导航", name: "isNavigation", widget: "boolean", default: true}
-          - {label: "主体", name: "body", widget: "markdown"}
-          - {label: "底部", name: "isFooter", widget: "boolean", default: true}
-        meta:
-          - {label: "描述", name: "description", widget: "text", default: "关于我们"}
+    - name: pages
+      label: 单页
+      files:
+          - file: src/pages/index.md
+            label: 首页
+            name: index
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: IndexPage
+                - label: 标题
+                  name: title
+                  widget: string
+                  default: 首页
+                - label: 描述
+                  name: description
+                  widget: text
+                  default: 首页描述
+                - label: 头部
+                  name: isHeader
+                  widget: boolean
+                  default: true
+                - label: 轮播
+                  name: isCarousel
+                  widget: boolean
+                  default: true
+                - label: 轮播图集
+                  name: carouselItems
+                  widget: list
+                  fields:
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 图片
+                        name: image
+                        widget: string
+                      - label: 路径
+                        name: path
+                        widget: string
+                - label: 推荐
+                  name: isFeature
+                  widget: boolean
+                  default: true
+                - label: 推荐图集
+                  name: featureItems
+                  widget: list
+                  fields:
+                      - label: 标题
+                        name: title
+                        widget: string
+                      - label: 图片
+                        name: image
+                        widget: string
+                      - label: 路径
+                        name: path
+                        widget: string
+                - label: 底部
+                  name: isFooter
+                  widget: boolean
+                  default: true
+          - file: src/pages/jobs/index.md
+            label: 招聘英才
+            name: jobs
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: JobsPage
+                - label: 标题
+                  name: title
+                  widget: string
+                  default: 招聘英才
+                - label: 描述
+                  name: description
+                  widget: text
+                  default: 招聘描述
+                - label: 头部
+                  name: isHeader
+                  widget: boolean
+                  default: true
+                - label: 主体
+                  name: body
+                  widget: markdown
+                - label: 底部
+                  name: isFooter
+                  widget: boolean
+                  default: true
+          - file: src/pages/about/index.md
+            label: 关于我们
+            name: about
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: AboutPage
+                - label: 标题
+                  name: title
+                  widget: string
+                  default: 关于我们
+                - label: 描述
+                  name: description
+                  widget: text
+                  default: 关于描述
+                - label: 头部
+                  name: isHeader
+                  widget: boolean
+                  default: true
+                - label: 主体
+                  name: body
+                  widget: markdown
+                - label: 底部
+                  name: isFooter
+                  widget: boolean
+                  default: true
 
-  - name: "settings"
-    label: "设置"
-    files:
-      - file: "src/pages/settings/logo.md"
-        label: "网标"
-        name: "logo"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "logo-settings"}
-          - {label: "网标", name: "logo", widget: "image"}
-          - {label: "路径", name: "path", widget: "string"}
-          - {label: "文字", name: "alt", widget: "string"}
-      - file: "src/pages/settings/navigation.md"
-        label: "导航"
-        name: "navigation"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "navigation-settings"}
-          - {label: "网标", name: "isLogo", widget: "boolean", default: true}
-          - label: "导航"
-            name: "menuItems"
-            widget: "list"
+    - name: settings
+      label: 设置
+      files:
+          - file: src/pages/settings/header.md
+            label: 头部
+            name: header
             fields:
-              - {label: "标题", name: "title", widget: "string"}
-              - {label: "路径", name: "path", widget: "string"}
-      - file: "src/pages/settings/carousel.md"
-        label: "轮播"
-        name: "carousel"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "carousel-settings"}
-          - {label: "箭头", name: "isShowArrows", widget: "boolean", default: true}
-          - {label: "当前", name: "isShowStatus", widget: "boolean", default: true}
-          - {label: "小点", name: "isShowIndicators", widget: "boolean", default: true}
-          - {label: "缩图", name: "isShowThumbs", widget: "boolean", default: false}
-          - {label: "循环", name: "isInfiniteLoop", widget: "boolean", default: true}
-          - {label: "初始", name: "selectedItem", widget: "number", default: 0}
-          - {label: "自动", name: "isAutoPlay", widget: "boolean", default: true}
-          - {label: "时间", name: "interval", widget: "number", default: 5000}
-          - {label: "高度", name: "isDynamicHeight", widget: "boolean", default: true}
-          - {label: "居中", name: "isCenterMode", widget: "boolean", default: true}
-          - {label: "宽度", name: "centerSlidePercentage", widget: "number", default: 40}
-          - label: "图集"
-            name: "carouselItems"
-            widget: "list"
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: HeaderSettings
+                - label: 是否显示网标
+                  name: isLogo
+                  widget: boolean
+                  default: true
+                - label: 网标设置
+                  name: logoItem
+                  widget: object
+                  fields:
+                      - label: 网标文字
+                        name: title
+                        widget: string
+                      - label: 网标图
+                        name: image
+                        widget: image
+                      - label: 路径
+                        name: path
+                        widget: string
+                - label: 是否显示导航
+                  name: isNav
+                  widget: boolean
+                  default: true
+                - label: 导航设置
+                  name: navItems
+                  widget: list
+                  fields:
+                      - label: 导航文字
+                        name: title
+                        widget: string
+                      - label: 路径
+                        name: path
+                        widget: string
+          - file: src/pages/settings/footer.md
+            label: 底部
+            name: footer
             fields:
-              - {label: "标题", name: "title", widget: "string"}
-              - {label: "图片", name: "image", widget: "image"}
-              - {label: "路径", name: "path", widget: "string"}
-      - file: "src/pages/settings/footer.md"
-        label: "底部"
-        name: "footer"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "footer-settings"}
-          - {label: "主体", name: "body", widget: "markdown"}
-      - file: "src/pages/settings/units.md"
-        label: "单位"
-        name: "units"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "units-settings"}
-          - {label: "货币", name: "currency", widget: "string"}
-          - {label: "重量", name: "weight", widget: "string"}
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: FooterSettings
+                - label: 主体
+                  name: body
+                  widget: markdown
+          - file: src/pages/settings/carousel.md
+            label: 轮播
+            name: carousel
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: CarouselSettings
+                - label: 时间
+                  name: interval
+                  widget: number
+                  default: 5000
+          - file: src/pages/settings/units.md
+            label: 单位
+            name: units
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: UnitsSettings
+                - label: 货币
+                  name: currency
+                  widget: string
+                - label: 重量
+                  name: weight
+                  widget: string

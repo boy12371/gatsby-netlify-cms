@@ -1,69 +1,23 @@
 import React from "react";
-import { Link, graphql, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import Img from "gatsby-image";
-import { LogoQueryData } from "../common/interfaces";
 
-const Logo: React.FC = ({}) => {
+import { ImageProps } from "../common/interfaces";
+
+const Logo: React.FC<ImageProps> = ({ title, image, path }) => {
+    image = image || { publicURL: "/assets/img/logo.svg" };
+    const logo = image.childImageSharp ? (
+        <Img style={{ width: "88px" }} fluid={image.childImageSharp.fluid} alt={title} />
+    ) : (
+        <img src={image.publicURL} alt={title} style={{ width: "88px" }} />
+    );
+    path = path || "/";
+
     return (
-        <StaticQuery
-            query={query}
-            render={(data: LogoQueryData) => {
-                const {
-                    allMarkdownRemark: {
-                        edges: [
-                            {
-                                node: { frontmatter: post }
-                            }
-                        ]
-                    }
-                } = data;
-                const image = post.logo.childImageSharp ? (
-                    <Img
-                        style={{ width: "88px" }}
-                        fluid={post.logo.childImageSharp.fluid}
-                        alt={post.alt}
-                    />
-                ) : (
-                    <img
-                        src={post.logo.publicURL}
-                        alt={post.alt}
-                        style={{ width: "88px" }}
-                    />
-                );
-                return (
-                    <Link to={post.path} className="navbar-item">
-                        <figure className="image">{image}</figure>
-                    </Link>
-                );
-            }}
-        />
+        <Link to={path} className="navbar-item">
+            <figure className="image">{logo}</figure>
+        </Link>
     );
 };
 
 export default Logo;
-
-const query = graphql`
-    query LogoQuery {
-        allMarkdownRemark(
-            filter: { frontmatter: { templateKey: { eq: "logo-settings" } } }
-        ) {
-            edges {
-                node {
-                    frontmatter {
-                        templateKey
-                        logo {
-                            publicURL
-                            childImageSharp {
-                                fluid {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                        path
-                        alt
-                    }
-                }
-            }
-        }
-    }
-`;

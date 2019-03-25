@@ -1,6 +1,9 @@
 ---
-templateKey: jobs-page
+templateKey: JobsPage
 title: 招聘英才
+description: "招聘描述"
+isHeader: true
+isFooter: true
 ---
 
 ![](/img/背景.jpg)

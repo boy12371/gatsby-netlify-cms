@@ -1,19 +1,15 @@
 import React from "react";
+import { Link } from "gatsby";
+import { NavProps } from "../common/interfaces/NavComp";
 
-import Menu from "./Menu";
-import Logo from "./Logo";
-
-const Navbar: React.FC = () => (
-    <nav className="navbar">
-        <div className="container">
-            <div className="navbar-brand">
-                <Logo />
-            </div>
-            <div className="navbar-start">
-                <Menu />
-            </div>
-        </div>
-    </nav>
+const Navbar: React.FC<NavProps> = ({ navItems }) => (
+    <div className="navbar-start">
+        {navItems.map((item, index) => (
+            <Link key={index} className="navbar-item" to={`${item.path}`}>
+                {item.title}
+            </Link>
+        ))}
+    </div>
 );
 
 export default Navbar;

@@ -1,5 +1,5 @@
 ---
-templateKey: units-settings
+templateKey: UnitsSettings
 currency: €
 weight: kg
 ---
