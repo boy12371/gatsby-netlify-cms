@@ -8,9 +8,9 @@ public_folder: /img
 collections:
     - name: article
       label: 文章
-      folder: "src/pages/article/{{year}}-{{month}}-{{day}}"
+      folder: src/pages/article/
       create: true
-      slug: "{{hour}}{{minute}}{{second}}-{{slug}}"
+      slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}{{second}}-{{slug}}"
       fields:
           - label: Template Key
             name: templateKey
@@ -20,6 +20,7 @@ collections:
             name: title
             widget: string
             tagname: h1
+            default: 文章标题
           - label: 描述
             name: description
             widget: text
@@ -31,6 +32,9 @@ collections:
           - label: 标签
             name: tags
             widget: list
+            default:
+                - 标签1
+                - 标签2
           - label: 主体
             name: body
             widget: markdown
