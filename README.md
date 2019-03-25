@@ -37,7 +37,7 @@ bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugi
 backend:
     name: github
     branch: master
-    repo: boy12371/gatsby-starter-netlify-cms
+    repo: boy12371/gatsby-netlify-cms
     base_url: https://api.netlify.com
 ```
 

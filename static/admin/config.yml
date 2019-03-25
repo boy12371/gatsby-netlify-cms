@@ -1,6 +1,8 @@
 backend:
-    name: git-gateway
+    name: github
     branch: master
+    repo: boy12371/gatsby-netlify-cms
+    base_url: https://api.netlify.com
 
 media_folder: static/img
 public_folder: /img
