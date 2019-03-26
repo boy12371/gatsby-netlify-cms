@@ -1,8 +1,10 @@
 backend:
     name: github
-    branch: master
     repo: boy12371/gatsby-netlify-cms
-    base_url: https://admiring-jepsen-0a9293.netlify.com
+    branch: master
+    api_root: https://api.github.com
+    base_url: https://api.netlify.com
+    auth_endpoint: auth
 
 media_folder: static/img
 public_folder: /img
