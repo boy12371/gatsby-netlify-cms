@@ -31,20 +31,38 @@ bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugi
 
 -   [config.yml](./static/admin/config.yml)
 
-## 本地调试
+*   [管理后台登录验证](https://www.netlifycms.org/docs/authentication-backends/)
 
-```yaml
-backend:
-    name: github
-    branch: master
-    repo: boy12371/gatsby-netlify-cms
-    base_url: https://api.netlify.com
-```
+*   github 验证
 
-## 远程部署
+    1. config.yml 添加 backend 配置
 
-```yaml
-backend:
-    name: git-gateway
-    branch: master
-```
+    ```yaml
+    backend:
+        name: github
+        repo: boy12371/gatsby-netlify-cms
+        branch: master
+        api_root: https://api.github.com
+        base_url: https://api.netlify.com
+        auth_endpoint: auth
+    ```
+
+    2. github 注册新应用
+        - [github 注册地址](https://github.com/settings/developers)
+    3. netlify 控台配置 github 验证
+        - [netlify 控台地址](https://app.netlify.com)
+    4. 详细教程
+        - [netlify 教程](https://www.netlify.com/docs/authentication-providers/)
+
+*   netlify 用户验证
+
+    1. config.yml 添加 backend 配置
+
+    ```yaml
+    backend:
+        name: git-gateway
+        branch: master
+    ```
+
+    2. 激活 ID 认证
+        - [netlify 教程](https://www.netlify.com/docs/identity)
