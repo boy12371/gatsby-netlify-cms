@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import { ImageProps } from "../common/interfaces";
 
 const Logo: React.FC<ImageProps> = ({ title, image, path }) => {
-    image = image || { publicURL: "/assets/img/logo.svg" };
+    image = image || { publicURL: "/img/logo.svg" };
     const logo = image.childImageSharp ? (
         <Img style={{ width: "88px" }} fluid={image.childImageSharp.fluid} alt={title} />
     ) : (

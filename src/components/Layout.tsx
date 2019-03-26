@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import "../assets/styles/all.sass";
 
 const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isHeader, isFooter, children }) => {
-    title = name ? title + "|" + TITLE : title + "|" + name;
+    title = name ? title + " | " + name : title + " | " + TITLE;
     description = description || DESCRIPTION;
     keywords = keywords || KEYWORDS.join();
     const HeaderElement = isHeader ? <Header /> : <></>;
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isH
 
     return (
         <>
-            <Helmet htmlAttributes={[{ lang: LANG }]}>
+            <Helmet htmlAttributes={{ lang: LANG }}>
                 <meta charSet="utf-8" />
                 <title>{title}</title>
                 <meta name="description" content={description} />

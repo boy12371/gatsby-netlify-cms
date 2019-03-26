@@ -3,7 +3,7 @@ templateKey: HeaderSettings
 isLogo: true
 logoItem:
     - title: kuangjia
-      image: /assets/img/logo.svg
+      image: /img/logo.svg
       path: /
 isNav: true
 navItems:
