@@ -7,6 +7,13 @@ export interface SiteMetadata {
     readonly author: string;
 }
 
+export type GatsbyPlugin =
+    | string
+    | {
+          resolve: string;
+          options: any;
+      };
+
 // ====================== Base ======================
 
 export interface BaseContentProps<C> {

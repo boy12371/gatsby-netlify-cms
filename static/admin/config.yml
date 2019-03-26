@@ -176,17 +176,20 @@ collections:
                   default: true
                 - label: 网标设置
                   name: logoItem
-                  widget: object
+                  widget: list
                   fields:
                       - label: 网标文字
                         name: title
                         widget: string
+                        default: "null"
                       - label: 网标图
                         name: image
                         widget: image
+                        default: /img/logo.svg
                       - label: 路径
                         name: path
                         widget: string
+                        default: "null"
                 - label: 是否显示导航
                   name: isNav
                   widget: boolean

@@ -8,6 +8,14 @@ export interface HeaderTemplateProps {
     navItems: NavItemProps[];
 }
 
+export interface HeaderProps {
+    data: {
+        markdownRemark: {
+            frontmatter: HeaderTemplateProps;
+        };
+    };
+}
+
 export interface HeaderQueryData {
     allMarkdownRemark: {
         edges: [
@@ -17,13 +25,5 @@ export interface HeaderQueryData {
                 };
             }
         ];
-    };
-}
-
-export interface HeaderProps {
-    data: {
-        markdownRemark: {
-            frontmatter: HeaderTemplateProps;
-        };
     };
 }

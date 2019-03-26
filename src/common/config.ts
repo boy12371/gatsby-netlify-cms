@@ -1,5 +1,5 @@
 import { SiteMetadata } from "./interfaces";
-import { GatsbyPlugin } from "./types";
+import { GatsbyPlugin } from "./interfaces";
 import { TITLE, DESCRIPTION, KEYWORDS, AUTHOR, ROOT } from "./constant";
 
 export const siteMetadata: SiteMetadata = {
@@ -14,6 +14,7 @@ export const plugins: GatsbyPlugin[] = [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
     "gatsby-transformer-sharp",
     {
         resolve: "gatsby-source-filesystem",
@@ -60,7 +61,12 @@ export const plugins: GatsbyPlugin[] = [
     },
     {
         resolve: "gatsby-plugin-netlify-cms",
-        options: { modulePath: `${ROOT}/src/cms/cms` }
+        options: {
+            modulePath: `${ROOT}/src/cms/cms`,
+            enableIdentityWidget: true,
+            publicPath: "admin",
+            htmlTitle: "匡架网络管理后台"
+        }
     },
     "gatsby-plugin-no-sourcemaps",
     // must be after other CSS plugins

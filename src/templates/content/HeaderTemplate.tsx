@@ -15,9 +15,11 @@ const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ isLogo, logoItem, isNav
     }
     let navElement: JSX.Element = <></>;
     if (isNav) {
-        <div className="navbar-start">
-            <Navbar navItems={navItems} />
-        </div>;
+        navElement = (
+            <div className="navbar-start">
+                <Navbar navItems={navItems} />
+            </div>
+        );
     }
     return (
         <nav className="navbar">

@@ -29,7 +29,7 @@ bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugi
 
 ## 注意：不要理睬安装依赖时的警告
 
--   [config.yml](./static/admin/config.yml)
+-   [config.yml](./static/kuang/config.yml)
 
 *   [管理后台登录验证](https://www.netlifycms.org/docs/authentication-backends/)
 
@@ -80,3 +80,5 @@ bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugi
   }
 }
 ```
+
+-   [客户端远程获取数据](https://www.gatsbyjs.org/docs/client-data-fetching)
