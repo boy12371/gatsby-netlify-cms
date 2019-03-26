@@ -66,3 +66,17 @@ bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugi
 
     2. 激活 ID 认证
         - [netlify 教程](https://www.netlify.com/docs/identity)
+
+## GraphiQL
+
+```graphiql
+{
+  allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "FooterSettings"}}}) {
+    edges {
+      node {
+        html
+      }
+    }
+  }
+}
+```

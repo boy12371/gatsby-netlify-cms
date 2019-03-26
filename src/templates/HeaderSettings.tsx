@@ -23,11 +23,6 @@ export const HeaderSettingsQuery = graphql`
                     title
                     image {
                         publicURL
-                        childImageSharp {
-                            fluid(maxWidth: 2048, quality: 100) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
                     }
                     path
                 }

@@ -5,6 +5,7 @@ import { LayoutProps } from "../common/interfaces/LayoutComp";
 import { DESCRIPTION, TITLE, KEYWORDS, SITEURL, AUTHOR, LANG } from "../common/constant";
 import Header from "./Header";
 import Footer from "./Footer";
+import favicon from "../assets/img/favicon.ico";
 import "../assets/styles/all.sass";
 
 const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isHeader, isFooter, children }) => {
@@ -23,7 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isH
                 <meta name="keywords" content={keywords} />
                 <meta name="hostname" content={SITEURL} />
                 <meta name="author" content={AUTHOR} />
-                <link rel="icon" type="image/x-icon" href="favicon.ico" />
+                <link rel="icon" type="image/x-icon" href={favicon} />
             </Helmet>
             {HeaderElement}
             {children}
