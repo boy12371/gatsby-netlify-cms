@@ -3,6 +3,7 @@ templateKey: AboutPage
 title: 关于我们
 description: "关于描述"
 isHeader: true
+isCrumb: true
 isFooter: true
 ---
 

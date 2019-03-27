@@ -3,6 +3,7 @@ templateKey: JobsPage
 title: 招聘英才
 description: "招聘描述"
 isHeader: true
+isCrumb: true
 isFooter: true
 ---
 

@@ -11,7 +11,7 @@ export const ArticlePostTemplate: React.FC<ArticlePostTemplateProps> = ({ title,
     const name = tags ? tags[0] : "文章";
 
     return (
-        <Layout name={name} title={title} description={description}>
+        <Layout name={name} title={title} description={description} tags={tags}>
             <section className="section">
                 <div className="container content">
                     <div className="columns">
@@ -22,7 +22,7 @@ export const ArticlePostTemplate: React.FC<ArticlePostTemplateProps> = ({ title,
                             {date}
                             {tags && tags.length ? (
                                 <div style={{ marginTop: `4rem` }}>
-                                    <h4>Tags</h4>
+                                    <h4>分类</h4>
                                     <ul className="taglist">
                                         {tags.map(tag => (
                                             <li key={tag + `tag`}>

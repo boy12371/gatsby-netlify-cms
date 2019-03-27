@@ -4,16 +4,18 @@ import Helmet from "react-helmet";
 import { LayoutProps } from "../common/interfaces/LayoutComp";
 import { DESCRIPTION, TITLE, KEYWORDS, SITEURL, AUTHOR, LANG } from "../common/constant";
 import Header from "./Header";
+import Crumb from "./Crumb";
 import Footer from "./Footer";
 import favicon from "../assets/img/favicon.ico";
 import "../assets/styles/all.sass";
 
-const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isHeader, isFooter, children }) => {
+const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isHeader, tags, isFooter, children }) => {
+    const CrumbElement = tags ? <Crumb tags={tags} title={title} /> : <></>;
     title = name ? title + " | " + name : title + " | " + TITLE;
     description = description || DESCRIPTION;
     keywords = keywords || KEYWORDS.join();
-    const HeaderElement = isHeader ? <Header /> : <></>;
-    const FooterElement = isFooter ? <Footer /> : <></>;
+    const HeaderElement = isHeader == false ? <></> : <Header />;
+    const FooterElement = isFooter == false ? <></> : <Footer />;
 
     return (
         <>
@@ -27,6 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isH
                 <link rel="icon" type="image/x-icon" href={favicon} />
             </Helmet>
             {HeaderElement}
+            {CrumbElement}
             {children}
             {FooterElement}
         </>

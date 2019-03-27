@@ -8,7 +8,15 @@ import { JobsPageProps } from "../common/interfaces/JobsPage";
 const JobsPage: React.FC<JobsPageProps> = ({ data }) => {
     const { markdownRemark: post } = data;
 
-    return <JobsPageTemplate title={post.frontmatter.title} content={post.html} contentComponent={HTMLContent} />;
+    return (
+        <JobsPageTemplate
+            title={post.frontmatter.title}
+            isHeader={post.frontmatter.isHeader}
+            content={post.html}
+            contentComponent={HTMLContent}
+            isFooter={post.frontmatter.isFooter}
+        />
+    );
 };
 
 export default JobsPage;

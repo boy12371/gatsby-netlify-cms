@@ -120,14 +120,18 @@ collections:
                   name: description
                   widget: text
                   default: 招聘描述
-                - label: 头部
+                - label: 是否显示头部
                   name: isHeader
+                  widget: boolean
+                  default: true
+                - label: 是否显示面包屑
+                  name: isCrumb
                   widget: boolean
                   default: true
                 - label: 主体
                   name: body
                   widget: markdown
-                - label: 底部
+                - label: 是否显示底部
                   name: isFooter
                   widget: boolean
                   default: true
@@ -147,14 +151,18 @@ collections:
                   name: description
                   widget: text
                   default: 关于描述
-                - label: 头部
+                - label: 是否显示头部
                   name: isHeader
+                  widget: boolean
+                  default: true
+                - label: 是否显示面包屑
+                  name: isCrumb
                   widget: boolean
                   default: true
                 - label: 主体
                   name: body
                   widget: markdown
-                - label: 底部
+                - label: 是否显示底部
                   name: isFooter
                   widget: boolean
                   default: true
