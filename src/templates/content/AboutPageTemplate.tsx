@@ -8,6 +8,7 @@ export const AboutPageTemplate: React.FC<AboutPageTemplateProps> = ({
     title,
     description,
     isHeader,
+    isCrumb,
     content,
     contentComponent,
     isFooter
@@ -15,7 +16,7 @@ export const AboutPageTemplate: React.FC<AboutPageTemplateProps> = ({
     const PageContent = contentComponent || Content;
 
     return (
-        <Layout title={title} description={description} isHeader={isHeader} isFooter={isFooter}>
+        <Layout title={title} description={description} isHeader={isHeader} isCrumb={isCrumb} isFooter={isFooter}>
             <section className="section section--gradient">
                 <div className="container">
                     <div className="columns">

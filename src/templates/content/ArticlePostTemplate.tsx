@@ -11,7 +11,7 @@ export const ArticlePostTemplate: React.FC<ArticlePostTemplateProps> = ({ title,
     const name = tags ? tags[0] : "文章";
 
     return (
-        <Layout name={name} title={title} description={description} tags={tags}>
+        <Layout name={name} title={title} description={description} isCrumb={true} tags={tags}>
             <section className="section">
                 <div className="container content">
                     <div className="columns">

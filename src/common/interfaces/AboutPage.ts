@@ -4,6 +4,7 @@ export interface AboutPageTemplateProps {
     title: string;
     description?: string;
     isHeader?: boolean;
+    isCrumb?: boolean;
     content?: string;
     contentComponent?: React.ComponentType<BaseContentProps<any>>;
     isFooter?: boolean;

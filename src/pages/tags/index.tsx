@@ -12,7 +12,7 @@ const TagsPage: React.FC<TagsPageProps> = ({ data }) => {
 
 export default TagsPage;
 
-export const tagPageQuery = graphql`
+export const tagsPageQuery = graphql`
     query TagsQuery {
         allMarkdownRemark(limit: 1000) {
             group(field: frontmatter___tags) {

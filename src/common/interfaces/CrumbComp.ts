@@ -1,4 +1,4 @@
 export interface CrumbProps {
-    tags?: string[] | boolean;
-    title?: string;
+    title: string;
+    tags: string[];
 }

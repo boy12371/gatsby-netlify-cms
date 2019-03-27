@@ -35,7 +35,7 @@ export default class Index extends React.Component {
 
     render() {
         return (
-            <Layout title="联系我们">
+            <Layout title="联系我们" isCrumb={true}>
                 <section className="section">
                     <div className="container">
                         <div className="content">

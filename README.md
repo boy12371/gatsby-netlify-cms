@@ -81,4 +81,5 @@ bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugi
 }
 ```
 
+-   [使用第三方 GraphQL API](https://www.gatsbyjs.org/docs/third-party-graphql)
 -   [客户端远程获取数据](https://www.gatsbyjs.org/docs/client-data-fetching)

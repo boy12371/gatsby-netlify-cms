@@ -1,7 +1,7 @@
 import React from "react";
 import { CrumbProps } from "../common/interfaces/CrumbComp";
 
-const Crumb: React.FC<CrumbProps> = ({ tags, title }) => {
+const Crumb: React.FC<CrumbProps> = ({ title, tags }) => {
     let TagElement: JSX.Element;
     if (tags && title) {
         TagElement = (
@@ -9,10 +9,8 @@ const Crumb: React.FC<CrumbProps> = ({ tags, title }) => {
                 首页 > {tags[0]} > {title}
             </div>
         );
-    } else if (tags == true && title) {
-        TagElement = <div>首页 > {title}</div>;
     } else {
-        TagElement = <></>;
+        TagElement = <div>首页 > {title}</div>;
     }
 
     return <>{TagElement}</>;

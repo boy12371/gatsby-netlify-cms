@@ -4,6 +4,7 @@ export interface LayoutProps {
     description?: string;
     keywords?: string;
     isHeader?: boolean;
+    isCrumb?: boolean;
     tags?: string[];
     isFooter?: boolean;
     children?: React.ReactNode;
