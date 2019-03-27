@@ -166,6 +166,29 @@ collections:
                   name: isFooter
                   widget: boolean
                   default: true
+          - file: src/pages/404.md
+            label: 没有找到
+            name: notfound
+            fields:
+                - label: Template Key
+                  name: templateKey
+                  widget: hidden
+                  default: NotFoundPage
+                - label: 标题
+                  name: title
+                  widget: string
+                  default: 没有找到
+                - label: 是否显示头部
+                  name: isHeader
+                  widget: boolean
+                  default: true
+                - label: 主体
+                  name: body
+                  widget: markdown
+                - label: 是否显示底部
+                  name: isFooter
+                  widget: boolean
+                  default: true
 
     - name: settings
       label: 设置
