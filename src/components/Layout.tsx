@@ -10,11 +10,11 @@ import favicon from "../assets/img/favicon.ico";
 import "../assets/styles/all.sass";
 
 const Layout: React.FC<LayoutProps> = ({ name, title, description, keywords, isHeader, isCrumb, tags, isFooter, children }) => {
+    const CrumbElement = isCrumb ? <Crumb title={title} tags={tags} /> : <></>;
     title = name ? title + " | " + name : title + " | " + TITLE;
     description = description || DESCRIPTION;
     keywords = keywords || KEYWORDS.join();
     const HeaderElement = isHeader == false ? <></> : <Header />;
-    const CrumbElement = isCrumb ? <Crumb title={title} tags={tags} /> : <></>;
     const FooterElement = isFooter == false ? <></> : <Footer />;
 
     return (

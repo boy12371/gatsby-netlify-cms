@@ -1,6 +1,6 @@
 export interface LayoutProps {
+    title: string;
     name?: string;
-    title?: string;
     description?: string;
     keywords?: string;
     isHeader?: boolean;

@@ -8,7 +8,14 @@ import AboutPageTemplate from "./content/AboutPageTemplate";
 const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
     const { markdownRemark: post } = data;
 
-    return <AboutPageTemplate title={post.frontmatter.title} content={post.html} contentComponent={HTMLContent} />;
+    return (
+        <AboutPageTemplate
+            title={post.frontmatter.title}
+            isCrumb={post.frontmatter.isCrumb}
+            content={post.html}
+            contentComponent={HTMLContent}
+        />
+    );
 };
 
 export default AboutPage;
@@ -21,6 +28,7 @@ export const aboutPageQuery = graphql`
                 title
                 description
                 isHeader
+                isCrumb
                 isFooter
             }
         }

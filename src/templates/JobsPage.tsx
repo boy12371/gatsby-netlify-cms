@@ -12,6 +12,7 @@ const JobsPage: React.FC<JobsPageProps> = ({ data }) => {
         <JobsPageTemplate
             title={post.frontmatter.title}
             isHeader={post.frontmatter.isHeader}
+            isCrumb={post.frontmatter.isCrumb}
             content={post.html}
             contentComponent={HTMLContent}
             isFooter={post.frontmatter.isFooter}
@@ -29,6 +30,7 @@ export const jobsPageQuery = graphql`
                 title
                 description
                 isHeader
+                isCrumb
                 isFooter
             }
         }

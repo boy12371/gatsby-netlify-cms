@@ -1,4 +1,4 @@
 export interface CrumbProps {
     title: string;
-    tags: string[];
+    tags?: string[];
 }

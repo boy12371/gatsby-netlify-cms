@@ -11,5 +11,10 @@ export interface AboutPageTemplateProps {
 }
 
 export interface AboutPageProps {
-    data: { markdownRemark: { html: any; frontmatter: { title: string; description: string; isHeader: boolean; isFooter: boolean } } };
+    data: {
+        markdownRemark: {
+            html: any;
+            frontmatter: { title: string; description: string; isHeader: boolean; isCrumb: boolean; isFooter: boolean };
+        };
+    };
 }
