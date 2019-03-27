@@ -23,6 +23,11 @@ export const HeaderSettingsQuery = graphql`
                     title
                     image {
                         publicURL
+                        childImageSharp {
+                            fluid {
+                                base64
+                            }
+                        }
                     }
                     path
                 }

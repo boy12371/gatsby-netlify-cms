@@ -1,8 +1,8 @@
 ---
 templateKey: HeaderSettings
-isLogo: true
+isLogo: false
 logoItem:
-    - title: kuangjia
+    - title: 匡架网络
       image: /img/logo.svg
       path: /
 isNav: true

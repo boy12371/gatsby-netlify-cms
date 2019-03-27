@@ -38,6 +38,11 @@ const query = graphql`
                             title
                             image {
                                 publicURL
+                                childImageSharp {
+                                    fluid {
+                                        base64
+                                    }
+                                }
                             }
                             path
                         }

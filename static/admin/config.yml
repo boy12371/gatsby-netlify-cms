@@ -177,11 +177,12 @@ collections:
                 - label: 网标设置
                   name: logoItem
                   widget: list
+                  allow_add: false
                   fields:
                       - label: 网标文字
                         name: title
                         widget: string
-                        default: "null"
+                        default: 匡架网络
                       - label: 网标图
                         name: image
                         widget: image
@@ -189,7 +190,7 @@ collections:
                       - label: 路径
                         name: path
                         widget: string
-                        default: "null"
+                        default: /
                 - label: 是否显示导航
                   name: isNav
                   widget: boolean
