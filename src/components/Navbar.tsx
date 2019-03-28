@@ -6,7 +6,7 @@ const Navbar: React.FC<NavProps> = ({ navItems }) => {
     return (
         <div className="navbar-start">
             {navItems.map((item, index) => (
-                <Link key={index} className="navbar-item" to={`${item.path}`}>
+                <Link key={index} className="navbar-item" to={`/${item.path}`}>
                     {item.title}
                 </Link>
             ))}

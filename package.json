@@ -36,7 +36,7 @@
         "gatsby-plugin-react-css-modules": "^2.0.9",
         "gatsby-plugin-react-helmet": "^3.0.10",
         "gatsby-plugin-sass": "^2.0.11",
-        "gatsby-plugin-sharp": "^2.0.30",
+        "gatsby-plugin-sharp": "^2.0.32",
         "gatsby-plugin-typescript": "^2.0.11",
         "gatsby-remark-copy-linked-files": "^2.0.11",
         "gatsby-remark-images": "^3.0.10",
@@ -52,7 +52,7 @@
         "parcel-bundler": "^1.12.3",
         "prop-types": "^15.7.2",
         "react": "^16.8.4",
-        "react-dom": "^16.8.4",
+        "react-dom": "^16.8.5",
         "react-helmet": "^5.2.0",
         "uuid": "^3.3.2"
     },

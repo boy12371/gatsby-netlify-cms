@@ -1,7 +1,8 @@
 import * as React from "react";
-import { graphql, StaticQuery, Link } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 
 import { CarouselQueryData, CarouselProps } from "../common/interfaces/CarouselComp";
+import CarouselTemplate from "../templates/content/CarouselTemplate";
 
 const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
     return (
@@ -19,18 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
                 } = data;
                 carouselItems = carouselItems || [];
 
-                return (
-                    <div>
-                        {post.interval}
-                        <div>
-                            {carouselItems.map((item, index) => (
-                                <Link key={index} className="navbar-item" to={`${item.path}`}>
-                                    {item.title}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                );
+                return <CarouselTemplate interval={post.interval} carouselItems={carouselItems} />;
             }}
         />
     );
