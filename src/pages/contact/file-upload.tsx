@@ -1,8 +1,8 @@
-import React from "react";
+import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
 
-function encode(data) {
+function encode(data: any) {
     const formData = new FormData();
 
     for (const key of Object.keys(data)) {
@@ -13,20 +13,20 @@ function encode(data) {
 }
 
 export default class Contact extends React.Component {
-    constructor(props) {
+    constructor(props: any) {
         super(props);
         this.state = {};
     }
 
-    handleChange = e => {
+    handleChange = (e: any) => {
         this.setState({ [e.target.name]: e.target.value });
     };
 
-    handleAttachment = e => {
+    handleAttachment = (e: any) => {
         this.setState({ [e.target.name]: e.target.files[0] });
     };
 
-    handleSubmit = e => {
+    handleSubmit = (e: any) => {
         e.preventDefault();
         const form = e.target;
         fetch("/", {
@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
 
     render() {
         return (
-            <Layout>
+            <Layout title="上传">
                 <section className="section">
                     <div className="container">
                         <div className="content">
@@ -56,18 +56,10 @@ export default class Contact extends React.Component {
                                 onSubmit={this.handleSubmit}
                             >
                                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                                <input
-                                    type="hidden"
-                                    name="form-name"
-                                    value="file-upload"
-                                />
+                                <input type="hidden" name="form-name" value="file-upload" />
                                 <div hidden>
                                     <label>
-                                        Don’t fill this out:{" "}
-                                        <input
-                                            name="bot-field"
-                                            onChange={this.handleChange}
-                                        />
+                                        Don’t fill this out: <input name="bot-field" onChange={this.handleChange} />
                                     </label>
                                 </div>
                                 <div className="field">
@@ -88,25 +80,15 @@ export default class Contact extends React.Component {
                                 <div className="field">
                                     <div className="file">
                                         <label className="file-label">
-                                            <input
-                                                className="file-input"
-                                                type="file"
-                                                name="attachment"
-                                                onChange={this.handleAttachment}
-                                            />
+                                            <input className="file-input" type="file" name="attachment" onChange={this.handleAttachment} />
                                             <span className="file-cta">
-                                                <span className="file-label">
-                                                    Choose a file…
-                                                </span>
+                                                <span className="file-label">Choose a file…</span>
                                             </span>
                                         </label>
                                     </div>
                                 </div>
                                 <div className="field">
-                                    <button
-                                        className="button is-link"
-                                        type="submit"
-                                    >
+                                    <button className="button is-link" type="submit">
                                         Send
                                     </button>
                                 </div>

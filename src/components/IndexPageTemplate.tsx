@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { IndexPageTemplateProps } from "../common/interfaces/IndexPage";
 import Carousel from "./Carousel";

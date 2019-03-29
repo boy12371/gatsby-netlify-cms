@@ -3,17 +3,21 @@ const path = require("path");
 module.exports = ({ config, mode }) => {
     // Add typescript loader
     config.module.rules.push({
-        test: /\.(ts|tsx)$/,
-        include: path.resolve(__dirname, "../stories"),
-        loader: "awesome-typescript-loader",
-        query: {
-            configFileName: ".storybook/tsconfig.json"
-        },
+        test: /\.tsx?$/,
+        use: [
+            {
+                loader: require.resolve("babel-loader"),
+                options: {
+                    presets: [require.resolve("babel-preset-react-app")]
+                }
+            },
+            require.resolve("react-docgen-typescript-loader")
+        ],
         exclude: /node_modules/
     });
     config.resolve.extensions.push(".ts", ".tsx");
 
-    // Add css loader
+    // Add less loader
     config.module.rules.push({
         test: /\.less$/,
         use: [

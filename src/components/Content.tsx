@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { HTMLContentProps, ContentProps } from "../common/interfaces";
 
 export const HTMLContent: React.FC<HTMLContentProps> = ({ content, className }) => {

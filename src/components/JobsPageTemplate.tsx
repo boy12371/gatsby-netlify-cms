@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { JobsPageTemplateProps } from "../common/interfaces/JobsPage";
 import Content from "./Content";

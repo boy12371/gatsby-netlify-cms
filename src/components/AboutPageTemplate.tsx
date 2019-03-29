@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { AboutPageTemplateProps } from "../common/interfaces/AboutPage";
 import Content from "./Content";

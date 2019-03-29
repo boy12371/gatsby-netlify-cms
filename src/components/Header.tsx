@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 import { HeaderQueryData } from "../common/interfaces/HeaderComp";

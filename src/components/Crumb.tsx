@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { CrumbProps } from "../common/interfaces/CrumbComp";
 
 const Crumb: React.FC<CrumbProps> = ({ title, tags }) => {

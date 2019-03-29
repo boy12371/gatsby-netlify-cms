@@ -60,7 +60,7 @@ export interface ImageProps {
     title: string;
     image: {
         publicURL: string;
-        childImageSharp: ChildImageSharp;
+        childImageSharp?: ChildImageSharp;
     };
     path?: string;
     style?: React.CSSProperties;

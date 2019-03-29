@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { FooterTemplateProps } from "../common/interfaces/FooterComp";
 import Content from "../components/Content";

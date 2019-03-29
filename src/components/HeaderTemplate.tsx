@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { HeaderTemplateProps } from "../common/interfaces/HeaderComp";
 import Logo from "./Logo";

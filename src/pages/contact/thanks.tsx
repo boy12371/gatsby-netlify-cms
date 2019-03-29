@@ -1,8 +1,8 @@
-import React from "react";
+import * as React from "react";
 import Layout from "../../components/Layout";
 
 export default () => (
-    <Layout>
+    <Layout title="感谢">
         <section className="section">
             <div className="container">
                 <div className="content">

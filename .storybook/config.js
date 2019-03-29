@@ -1,6 +1,8 @@
 import { configure } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
 import "antd/dist/antd.less";
+import "../stories/css/style.css";
+import "../stories/css/icons.css";
 
 setOptions({
     name: "匡架ReactAntd组件",

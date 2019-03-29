@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import { NotFoundPageTemplateProps } from "../common/interfaces/NotFoundPage";
 import Content from "./Content";
