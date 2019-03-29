@@ -1,9 +1,9 @@
 import React from "react";
 
-import { IndexPageTemplateProps } from "../../common/interfaces/IndexPage";
-import Carousel from "../../components/Carousel";
-import Layout from "../../components/Layout";
-import Feature from "../../components/Features";
+import { IndexPageTemplateProps } from "../common/interfaces/IndexPage";
+import Carousel from "./Carousel";
+import Layout from "./Layout";
+import Feature from "./Features";
 
 export const IndexPageTemplate: React.FC<IndexPageTemplateProps> = ({
     title,
@@ -25,3 +25,5 @@ export const IndexPageTemplate: React.FC<IndexPageTemplateProps> = ({
         </Layout>
     );
 };
+
+export default IndexPageTemplate;

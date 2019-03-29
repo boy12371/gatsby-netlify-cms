@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import { UnitsSettingsProps } from "../common/interfaces/UnitsComp";
-import UnitsTemplate from "./content/UnitsTemplate";
+import UnitsTemplate from "../components/UnitsTemplate";
 
 const UnitsSettings: React.FC<UnitsSettingsProps> = ({ data }) => {
     const {

@@ -1,22 +1,14 @@
 import React from "react";
 
-import { AboutPageTemplateProps } from "../../common/interfaces/AboutPage";
-import Content from "../../components/Content";
-import Layout from "../../components/Layout";
+import { NotFoundPageTemplateProps } from "../common/interfaces/NotFoundPage";
+import Content from "./Content";
+import Layout from "./Layout";
 
-export const AboutPageTemplate: React.FC<AboutPageTemplateProps> = ({
-    title,
-    description,
-    isHeader,
-    isCrumb,
-    content,
-    contentComponent,
-    isFooter
-}) => {
+export const NotFoundPageTemplate: React.FC<NotFoundPageTemplateProps> = ({ title, isHeader, content, contentComponent, isFooter }) => {
     const PageContent = contentComponent || Content;
 
     return (
-        <Layout title={title} description={description} isHeader={isHeader} isCrumb={isCrumb} isFooter={isFooter}>
+        <Layout title={title} isHeader={isHeader} isFooter={isFooter}>
             <section className="section section--gradient">
                 <div className="container">
                     <div className="columns">
@@ -33,4 +25,4 @@ export const AboutPageTemplate: React.FC<AboutPageTemplateProps> = ({
     );
 };
 
-export default AboutPageTemplate;
+export default NotFoundPageTemplate;

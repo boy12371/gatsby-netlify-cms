@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import { kebabCase } from "lodash";
 
-import { TagsPageTemplateProps } from "../../common/interfaces/TagsPage";
-import Layout from "../../components/Layout";
+import { TagsPageTemplateProps } from "../common/interfaces/TagsPage";
+import Layout from "../components/Layout";
 
 export const TagsPageTemplate: React.FC<TagsPageTemplateProps> = ({ group }) => {
     group = group || [{ fieldValue: "", totalCount: 0 }];

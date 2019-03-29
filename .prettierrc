@@ -21,6 +21,9 @@ overrides:
     - files: ".postcssrc"
       options:
           parser: json
+    - files: ".babelrc"
+      options:
+          parser: json
     - files: "*.ts"
       options:
           parser: typescript

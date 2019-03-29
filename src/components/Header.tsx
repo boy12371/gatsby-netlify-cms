@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 import { HeaderQueryData } from "../common/interfaces/HeaderComp";
-import HeaderTemplate from "../templates/content/HeaderTemplate";
+import HeaderTemplate from "./HeaderTemplate";
 
 export const Header: React.FC = ({}) => {
     return (

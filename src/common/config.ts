@@ -11,6 +11,18 @@ export const siteMetadata: SiteMetadata = {
 
 export const plugins: GatsbyPlugin[] = [
     "gatsby-plugin-typescript",
+    {
+        resolve: "gatsby-plugin-less",
+        options: {
+            javascriptEnabled: true
+        }
+    },
+    {
+        resolve: "gatsby-plugin-antd",
+        options: {
+            style: true
+        }
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     "gatsby-plugin-sharp",

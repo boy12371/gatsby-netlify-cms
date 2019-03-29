@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import { TagsPageProps } from "../../common/interfaces/TagsPage";
-import TagsPageTemplate from "../../templates/content/TagsPageTemplate";
+import TagsPageTemplate from "../../components/TagsPageTemplate";
 
 const TagsPage: React.FC<TagsPageProps> = ({ data }) => {
     const { allMarkdownRemark: post } = data;

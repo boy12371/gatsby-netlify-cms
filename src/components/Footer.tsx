@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 import { FooterQueryData } from "../common/interfaces/FooterComp";
-import FooterTemplate from "../templates/content/FooterTemplate";
+import FooterTemplate from "./FooterTemplate";
 import { HTMLContent } from "./Content";
 
 export const Footer: React.FC = ({}) => {

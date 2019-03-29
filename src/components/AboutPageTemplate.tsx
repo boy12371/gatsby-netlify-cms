@@ -1,10 +1,10 @@
 import React from "react";
 
-import { JobsPageTemplateProps } from "../../common/interfaces/JobsPage";
-import Content from "../../components/Content";
-import Layout from "../../components/Layout";
+import { AboutPageTemplateProps } from "../common/interfaces/AboutPage";
+import Content from "./Content";
+import Layout from "./Layout";
 
-export const JobsPageTemplate: React.FC<JobsPageTemplateProps> = ({
+export const AboutPageTemplate: React.FC<AboutPageTemplateProps> = ({
     title,
     description,
     isHeader,
@@ -32,3 +32,5 @@ export const JobsPageTemplate: React.FC<JobsPageTemplateProps> = ({
         </Layout>
     );
 };
+
+export default AboutPageTemplate;

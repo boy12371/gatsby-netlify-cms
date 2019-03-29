@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { CarouselTemplateProps } from "../../common/interfaces/CarouselComp";
+import { CarouselTemplateProps } from "../common/interfaces/CarouselComp";
 
 const CarouselTemplate: React.FC<CarouselTemplateProps> = ({ interval, carouselItems }) => {
     carouselItems = carouselItems || [];

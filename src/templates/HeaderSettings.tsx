@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import { HeaderProps } from "../common/interfaces/HeaderComp";
-import HeaderTemplate from "./content/HeaderTemplate";
+import HeaderTemplate from "../components/HeaderTemplate";
 
 const HeaderSettings: React.FC<HeaderProps> = ({ data }) => {
     const {

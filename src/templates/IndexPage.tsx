@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import { IndexPageProps } from "../common/interfaces/IndexPage";
-import { IndexPageTemplate } from "./content/IndexPageTemplate";
+import { IndexPageTemplate } from "../components/IndexPageTemplate";
 
 const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
     const {

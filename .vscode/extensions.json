@@ -7,7 +7,6 @@
         "xabikos.javascriptsnippets",
         "waderyan.nodejs-extension-pack",
         "esbenp.prettier-vscode",
-        "foxundermoon.shell-format",
         "stevencl.adddoccomments"
     ]
 }

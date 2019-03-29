@@ -1,8 +1,8 @@
 import React from "react";
 
-import { HeaderTemplateProps } from "../../common/interfaces/HeaderComp";
-import Logo from "../../components/Logo";
-import Navbar from "../../components/Navbar";
+import { HeaderTemplateProps } from "../common/interfaces/HeaderComp";
+import Logo from "./Logo";
+import Navbar from "./Navbar";
 
 const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ isLogo, logoItem, isNav, navItems }) => {
     let logoElement: JSX.Element = <></>;

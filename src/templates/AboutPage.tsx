@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import { HTMLContent } from "../components/Content";
 import { AboutPageProps } from "../common/interfaces/AboutPage";
-import AboutPageTemplate from "./content/AboutPageTemplate";
+import { HTMLContent } from "../components/Content";
+import AboutPageTemplate from "../components/AboutPageTemplate";
 
 const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
     const { markdownRemark: post } = data;

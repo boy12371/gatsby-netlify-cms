@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "esnext",
+        "target": "es5",
         "jsx": "preserve",
         "strict": true,
         "noEmit": true,

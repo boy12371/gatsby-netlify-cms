@@ -1,14 +1,22 @@
 import React from "react";
 
-import { NotFoundPageTemplateProps } from "../../common/interfaces/NotFoundPage";
-import Content from "../../components/Content";
-import Layout from "../../components/Layout";
+import { JobsPageTemplateProps } from "../common/interfaces/JobsPage";
+import Content from "./Content";
+import Layout from "./Layout";
 
-export const NotFoundPageTemplate: React.FC<NotFoundPageTemplateProps> = ({ title, isHeader, content, contentComponent, isFooter }) => {
+export const JobsPageTemplate: React.FC<JobsPageTemplateProps> = ({
+    title,
+    description,
+    isHeader,
+    isCrumb,
+    content,
+    contentComponent,
+    isFooter
+}) => {
     const PageContent = contentComponent || Content;
 
     return (
-        <Layout title={title} isHeader={isHeader} isFooter={isFooter}>
+        <Layout title={title} description={description} isHeader={isHeader} isCrumb={isCrumb} isFooter={isFooter}>
             <section className="section section--gradient">
                 <div className="container">
                     <div className="columns">
@@ -24,5 +32,3 @@ export const NotFoundPageTemplate: React.FC<NotFoundPageTemplateProps> = ({ titl
         </Layout>
     );
 };
-
-export default NotFoundPageTemplate;

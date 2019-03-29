@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import { kebabCase } from "lodash";
 
-import { ArticlePostTemplateProps } from "../../common/interfaces/ArticlePost";
-import Content from "../../components/Content";
-import Layout from "../../components/Layout";
+import { ArticlePostTemplateProps } from "../common/interfaces/ArticlePost";
+import Content from "./Content";
+import Layout from "./Layout";
 
 export const ArticlePostTemplate: React.FC<ArticlePostTemplateProps> = ({ title, description, date, content, contentComponent, tags }) => {
     const PostContent = contentComponent || Content;

@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import { HTMLContent } from "../components/Content";
-import { JobsPageTemplate } from "./content/JobsPageTemplate";
 import { JobsPageProps } from "../common/interfaces/JobsPage";
+import { HTMLContent } from "../components/Content";
+import { JobsPageTemplate } from "../components/JobsPageTemplate";
 
 const JobsPage: React.FC<JobsPageProps> = ({ data }) => {
     const { markdownRemark: post } = data;

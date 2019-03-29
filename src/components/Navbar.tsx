@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "gatsby";
+import { Menu } from "antd";
 import { NavProps } from "../common/interfaces/NavComp";
 
 const Navbar: React.FC<NavProps> = ({ navItems }) => {
     return (
-        <div className="navbar-start">
+        <Menu mode="horizontal">
             {navItems.map((item, index) => (
-                <Link key={index} className="navbar-item" to={`/${item.path}`}>
-                    {item.title}
-                </Link>
+                <Menu.Item key={index}>
+                    <Link key={index} to={`/${item.path}`}>
+                        {item.title}
+                    </Link>
+                </Menu.Item>
             ))}
-        </div>
+        </Menu>
     );
 };
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 import { CarouselQueryData, CarouselProps } from "../common/interfaces/CarouselComp";
-import CarouselTemplate from "../templates/content/CarouselTemplate";
+import CarouselTemplate from "./CarouselTemplate";
 
 const Carousel: React.FC<CarouselProps> = ({ carouselItems }) => {
     return (

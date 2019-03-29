@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import { NotFoundPageProps } from "../common/interfaces/NotFoundPage";
 import { HTMLContent } from "../components/Content";
-import { NotFoundPageTemplate } from "./content/NotFoundPageTemplate";
+import { NotFoundPageTemplate } from "../components/NotFoundPageTemplate";
 
 const NotFoundPage: React.FC<NotFoundPageProps> = ({ data }) => {
     const { markdownRemark: post } = data;

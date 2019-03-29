@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import { FooterProps } from "../common/interfaces/FooterComp";
 import { HTMLContent } from "../components/Content";
-import FooterTemplate from "./content/FooterTemplate";
+import FooterTemplate from "../components/FooterTemplate";
 
 const FooterSettings: React.FC<FooterProps> = ({ data }) => {
     const { markdownRemark: post } = data;

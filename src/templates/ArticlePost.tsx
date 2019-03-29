@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import { HTMLContent } from "../components/Content";
 import { ArticlePostProps } from "../common/interfaces/ArticlePost";
-import { ArticlePostTemplate } from "./content/ArticlePostTemplate";
+import { HTMLContent } from "../components/Content";
+import { ArticlePostTemplate } from "../components/ArticlePostTemplate";
 
 const ArticlePost: React.FC<ArticlePostProps> = ({ data }) => {
     const { markdownRemark: post } = data;
