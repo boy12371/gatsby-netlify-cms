@@ -1,6 +1,8 @@
 const path = require("path");
 
 module.exports = ({ config, mode }) => {
+    mode: "DEVELOPMENT";
+
     // Add typescript loader
     config.module.rules.push({
         test: /\.tsx?$/,

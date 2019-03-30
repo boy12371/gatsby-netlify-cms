@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { HeaderTemplateProps } from "../common/interfaces/HeaderComp";
-import Logo from "./Logo";
+import Logo from "./base/Logo";
 import Navbar from "./Navbar";
 
 const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ isLogo, logoItem, isNav, navItems }) => {
@@ -9,7 +9,7 @@ const HeaderTemplate: React.FC<HeaderTemplateProps> = ({ isLogo, logoItem, isNav
     if (isLogo) {
         logoElement = (
             <div className="navbar-brand">
-                <Logo title={logoItem.title} image={logoItem.image} path={logoItem.path} />
+                <Logo />
             </div>
         );
     }
