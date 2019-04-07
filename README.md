@@ -18,13 +18,13 @@ npm start
 # dependencies
 
 ```
-bulma gatsby gatsby-image gatsby-plugin-feed gatsby-plugin-manifest gatsby-plugin-netlify gatsby-plugin-netlify-cms gatsby-plugin-no-sourcemaps gatsby-plugin-offline gatsby-plugin-purgecss gatsby-plugin-react-css-modules gatsby-plugin-react-helmet gatsby-plugin-sass gatsby-plugin-sharp gatsby-plugin-typescript gatsby-remark-copy-linked-files gatsby-remark-images gatsby-remark-relative-images gatsby-remark-responsive-iframe gatsby-source-filesystem gatsby-transformer-remark gatsby-transformer-sharp lodash lodash-webpack-plugin netlify-cms node-sass parcel-bundler prop-types react react-dom react-helmet react-redux react-responsive-carousel redux uuid
+antd bulma gatsby gatsby-image gatsby-plugin-antd gatsby-plugin-feed gatsby-plugin-less gatsby-plugin-manifest gatsby-plugin-netlify gatsby-plugin-netlify-cms gatsby-plugin-no-sourcemaps gatsby-plugin-offline gatsby-plugin-purgecss gatsby-plugin-react-css-modules gatsby-plugin-react-helmet gatsby-plugin-sass gatsby-plugin-sharp gatsby-plugin-typescript gatsby-remark-copy-linked-files gatsby-remark-images gatsby-remark-relative-images gatsby-remark-responsive-iframe gatsby-source-filesystem gatsby-transformer-remark gatsby-transformer-sharp less lodash lodash-webpack-plugin netlify-cms node-sass parcel-bundler react react-dom react-helmet uuid
 ```
 
 # devDependencies
 
 ```
-@types/lodash @types/node @types/react @types/react-dom @types/react-helmet @types/uuid cpy-cli gh-pages prettier rimraf source-map-support ts-node tsconfig-paths tslint typescript
+@storybook/addon-actions @storybook/addon-info @storybook/addon-knobs @storybook/addon-links @storybook/addon-notes @storybook/addon-options @storybook/addon-viewport @storybook/react @types/lodash @types/node @types/react @types/react-dom @types/react-helmet @types/react-infinite-scroller @types/storybook__addon-actions @types/storybook__addon-knobs @types/storybook__addon-links @types/storybook__addon-options @types/storybook__addon-viewport @types/storybook__react @types/uuid awesome-typescript-loader babel-preset-env babel-preset-react cpy-cli gh-pages http-server prettier react-docgen-typescript-loader react-docgen-typescript-webpack-plugin react-infinite-scroller reqwest rimraf source-map-support storybook-readme ts-loader ts-node tsconfig-paths tslint typescript
 ```
 
 ## 注意：不要理睬安装依赖时的警告
